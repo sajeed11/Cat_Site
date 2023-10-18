@@ -3,7 +3,7 @@ import { logo } from '../assets';
 
 const NavBar = () => {
     return (
-        <nav className="w-full felx py-3 justify-between items-center navbar">
+        <nav className="w-full flex flex-row py-3 justify-between items-center">
             <img src={logo} alt="Kitty" width={60} />
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
                 {navLinks.map((nav, index) => (

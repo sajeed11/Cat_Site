@@ -10,7 +10,7 @@ const Hero = () => {
                 className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
             >
                 <GetLife />
-                <div className="flex flex-row justify-between items-center w-full">
+                <div className="flex flex-row justify-between items-center w-full mt-6">
                     <h1 className="mt-3 flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[85px] leading-[60px]">
                         The Next Generation<br className="sm:block hidden" />{" "}
                     </h1>
@@ -21,7 +21,7 @@ const Hero = () => {
                 <TypingEffect text='Our team of experts uses a methodology to identify the credit cards most
                     likely to fit your needs. We examine annual percentage rates, annual
                     fees.' speed={30} />
-                <div className="mt-3">
+                <div className="mt-6">
 
                     <Button />
                 </div>
