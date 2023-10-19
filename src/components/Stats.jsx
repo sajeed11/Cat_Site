@@ -4,7 +4,7 @@ import { stats } from "../constants"
 
 const Stats = () => {
     return (
-        <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
+        <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6 mt-10`}>
             {
                 stats.map((stat) => (
                     <div className={`flex-1 flex flex-row justify-start items-center m-3`}

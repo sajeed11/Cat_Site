@@ -60,3 +60,31 @@ export const features = [
       "A balance transfer credit card can save you a lot of money in interest charges.",
   },
 ];
+
+export const navitems = [
+  {
+    id: "navitem-1",
+    title: "Serengeti",
+  },
+
+  {
+    id: "navitem-2",
+    title: "American Bobtail",
+  },
+  {
+    id: "navitem-3",
+    title: "Abyssinian",
+  },
+  {
+    id: "navitem-4",
+    title: "Exotic Shorthair",
+  },
+  {
+    id: "navitem-5",
+    title: "Turkish Van",
+  },
+  {
+    id: "navitem-6",
+    title: "Norwegian Forest",
+  },
+];
