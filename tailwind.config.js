@@ -16,6 +16,7 @@ export default {
       },
       backgroundImage: {
         cat_landing: "url('./src/assets/cats.jpg')",
+        cat_landing2: "url('./src/assets/cats2.jpg')",
       },
     },
     screens: {
