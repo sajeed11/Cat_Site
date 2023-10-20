@@ -20,7 +20,7 @@ const TypingEffect = ({ text, speed }) => {
         };
     }, [text, textIndex, speed]);
 
-    return <p className={`font-poppins font-normal text-[18px] leading-[30.8px] max-w-[470px] mt-3 text-black`}>{displayText}</p>;
+    return <p className={`font-poppins font-normal text-[18px] leading-[30.8px] max-w-[470px] mt-2 text-black`}>{displayText}</p>;
 };
 
 export default TypingEffect;

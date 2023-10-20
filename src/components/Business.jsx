@@ -25,7 +25,6 @@ const FeatureCard = ({ title, content, icon, index }) => (
 );
 
 const Business = () => {
-    console.log(features);
     return (
         <section id="features" className={layout.section}>
             <div className={layout.sectionInfo}>

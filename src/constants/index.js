@@ -2,7 +2,7 @@ import { featureLogo1, featureLogo2, featureLogo3 } from "../assets";
 
 export const navLinks = [
   {
-    id: "home",
+    id: "",
     title: "Home",
   },
   {
@@ -10,12 +10,12 @@ export const navLinks = [
     title: "Cats",
   },
   {
-    id: "product",
-    title: "Product",
+    id: "images",
+    title: "Images",
   },
   {
-    id: "informations",
-    title: "Informations",
+    id: "contact",
+    title: "Contact Us",
   },
 ];
 
