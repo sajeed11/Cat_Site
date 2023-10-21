@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import { navitems } from "../constants"
 
 const Notification = () => {
@@ -36,7 +37,7 @@ const Notification = () => {
                     </div>
                 </div>
                 <div className="mt-20 ml-5">
-                    <h1>See More</h1>
+                    <Link to='/images'>See More</Link>
                 </div>
             </div>
         </>

@@ -5,6 +5,7 @@ import styles from "./styles"
 import NavBar from "./components/NavBar"
 import Home from "./components/Home"
 import Contact from "./components/Contact"
+import Images from "./components/Images"
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/images" element={<Images />} />
             </Routes>
 
         </div>
