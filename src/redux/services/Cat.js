@@ -16,13 +16,14 @@ export const catApi = createApi({
     getBreeds: builder.query({
       query: () => `/breeds`,
     }),
-    // getImages: builder.query({
-    //   query: (breedId) => `/images/search?breed_ids=${breedId}`,
-    // }),
-    // getCategories: builder.query({
-    //   query: () => `/categories`,
-    // }),
+    getImages: builder.query({
+      query: (breedId) => `/images/search?breed_ids=${breedId}`,
+    }),
+    getFirstImages: builder.query({
+      query: () => `/images/search?limit=10`,
+    }),
   }),
 });
 
-export const { useGetBreedsQuery } = catApi;
+export const { useGetBreedsQuery, useGetImagesQuery, useGetFirstImagesQuery } =
+  catApi;
