@@ -20,7 +20,7 @@ export const catApi = createApi({
       query: (breedId) => `/images/search?breed_ids=${breedId}`,
     }),
     getFirstImages: builder.query({
-      query: () => `/images/search?limit=10`,
+      query: () => `/images/search?limit=5`,
     }),
   }),
 });

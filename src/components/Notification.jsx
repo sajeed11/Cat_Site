@@ -5,8 +5,6 @@ import { navitems } from "../constants"
 const Notification = () => {
     const column1 = navitems.slice(0, 3);
     const column2 = navitems.slice(3, 6);
-
-    console.log(column1, column2)
     return (
         <>
             <div className="absolute top-6 right-1 w-[400px] h-[250px] bg-white rounded-[20px] hidden group-hover:block">

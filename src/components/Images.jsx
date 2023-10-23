@@ -1,21 +1,24 @@
-import { useGetFirstImagesQuery, useGetBreedsQuery } from "../redux/services/Cat"
+import { useEffect } from "react";
+import { useGetFirstImagesQuery, useGetBreedsQuery, useGetImagesQuery } from "../redux/services/Cat"
+import { connect } from "react-redux";
 
 import SearchBar from "./SearchBar";
 
-const Images = () => {
+
+
+
+const Images = ({ selectedItem }) => {
     const { data, error, isFetching } = useGetFirstImagesQuery();
-    const { data1 } = useGetBreedsQuery();
-    console.log(data1);
-    //console.log(data);
-    //csonsole.log(data1);
+    //const { data1 } = useGetImagesQuery();
+    //const [searchResults, setSearchResults] = useState([]);
 
-    // const [searchResults, setSearchResults] = useState([]);
-
-    // const handleSearch = (query) => {
-    //     // Simulate a search request and update the results
-    //     const { data } = useGetImagesQuery(query); // Replace with actual search logic
-    //     setSearchResults(data);
-    // };
+    useEffect(() => {
+        const fetchImages = async () => { useGetImagesQuery(selectedItem) };
+        if (selectedItem) {
+            // Fetch images based on selectedItem and update component state
+            fetchImages();
+        }
+    }, [selectedItem]);
 
     if (isFetching) return <div>Loading...</div>;
     if (error) return <div>Oh no, there was an error</div>;
@@ -38,4 +41,8 @@ const Images = () => {
     )
 }
 
-export default Images
+const mapStateToProps = (state) => ({
+    selectedItem: state.selectedItem, // Access the shared state from the Redux store
+});
+
+export default connect(mapStateToProps)(Images);

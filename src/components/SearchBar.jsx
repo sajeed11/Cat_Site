@@ -1,19 +1,28 @@
-// SearchBar.js
-import { useState } from 'react';
-import { useGetBreedsQuery } from '../redux/services/Cat';
 
-const SearchBar = () => {
-    const [selectedItem, setSelectedItem] = useState('');
-    const fetchItems = useGetBreedsQuery();
-    //console.log(fetchItems);
+import { useGetBreedsQuery } from '../redux/services/Cat';
+import { setSelectedItem } from '../redux/actions';
+import { connect } from 'react-redux';
+
+const SearchBar = ({ selectedItem, setSelectedItem }) => {
+    const { data, error, isFetching } = useGetBreedsQuery();
+    const handleSelect = (item) => {
+        setSelectedItem(item);
+        //console.log(item); // Dispatch the action to update the selectedItem state
+    };
+
+
+    console.log(selectedItem);
+
+    if (isFetching) return <div>Loading...</div>;
+    if (error) return <div>Oh no, there was an error</div>;
     return (
         <div>
             <select
                 value={selectedItem}
-                onChange={(e) => setSelectedItem(e.target.value)}
+                onChange={(e) => handleSelect(e.target.value)}
             >
                 <option value="">Select an item</option>
-                {fetchItems.data.map((item) => (
+                {data.map((item) => (
                     <option key={item.id} value={item.id}>
                         {item.name}
                     </option>
@@ -23,4 +32,8 @@ const SearchBar = () => {
     );
 };
 
-export default SearchBar;
+const mapStateToProps = (state) => ({
+    selectedItem: state.selectedItem, // Access the shared state from the Redux store
+});
+
+export default connect(mapStateToProps, { setSelectedItem })(SearchBar);
