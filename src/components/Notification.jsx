@@ -7,7 +7,7 @@ const Notification = () => {
     const column2 = navitems.slice(3, 6);
     return (
         <>
-            <div className="absolute top-6 right-1 w-[400px] h-[250px] bg-white rounded-[20px] hidden group-hover:block">
+            <div className="absolute top-6 z-10 right-1 w-[400px] h-[250px] bg-white rounded-[20px] hidden group-hover:block">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-5 ">
                     <div>
                         {column1.map((link, index) => (
