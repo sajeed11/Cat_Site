@@ -1,23 +1,16 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { catApi } from "./services/Cat";
+import breedsReducer from "./actions";
 
-const selectedItemSlice = createSlice({
-  name: "selectedItem",
-  initialState: { value: "" },
-  reducers: {
-    setSelectedItem: (state, action) => {
-      state.value = action.payload;
-    },
-  },
-});
-
-export const { setSelectedItem } = selectedItemSlice.actions;
-
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     [catApi.reducerPath]: catApi.reducer,
-    selectedItem: selectedItemSlice.reducer,
+    breeds: breedsReducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(catApi.middleware),
+    getDefaultMiddleware({ serializableCheck: false }).concat(
+      catApi.middleware
+    ),
 });
+
+export default store;
