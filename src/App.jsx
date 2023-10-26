@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar"
 import Home from "./components/Home"
 import Contact from "./components/Contact"
 import Images from "./components/Images"
+import LearnAboutCats from "./components/LearnAboutCats"
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/images" element={<Images />} />
+                <Route path="/cats" element={<LearnAboutCats />} />
             </Routes>
 
         </div>

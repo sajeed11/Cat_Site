@@ -1,6 +1,4 @@
 import styles from "../styles"
-
-import GetLife from "./GetLife"
 import TypingEffect from "./TypingEffect"
 import Button from "./Button"
 

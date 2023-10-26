@@ -1,6 +1,52 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useGetImagesQuery, useGetFirstImagesQuery } from '../redux/services/Cat';
 import SearchBar from './SearchBar';
+import styles from "../styles"
+
+
+export const CatImageCard = ({ cat }) => {
+    return (
+        <div className="max-w-sm w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 cursor-pointer">
+            <div className="relative">
+                {/* Image */}
+                <img
+                    src={cat.url}
+                    alt={cat.id}
+                    className="rounded-lg shadow-md w-full h-64 object-cover"
+                />
+
+                {/* Overlay for additional effects */}
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+
+                {/* Title and Info */}
+                <div className="absolute bottom-0 left-0 p-4 text-white">
+                    <h2 className="text-2xl font-semibold mb-2">{cat.breeds[0].name}</h2>
+                    {/* Additional information can be added here */}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+
+export const CatImageCardWithoutProps = ({ cat }) => {
+    return (
+        <div className="max-w-sm w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 cursor-pointer">
+            <div className="relative">
+                {/* Image */}
+                <img
+                    src={cat.url}
+                    alt={cat.id}
+                    className="rounded-lg shadow-md w-full h-64 object-cover"
+                />
+
+                {/* Overlay for additional effects */}
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 hover:opacity-60 transition-opacity duration-300"></div>
+            </div>
+        </div>
+    );
+}
+
 
 const Images = () => {
     const dispatch = useDispatch();
@@ -15,17 +61,17 @@ const Images = () => {
     if (firstImagesIsFetching) return <div>Loading...</div>;
     if (error) return <div>Oh no, there was an error</div>;
     return (
-        <div>
+        <div className={`${styles.section} ${styles.marginX}`}>
             <SearchBar selectedItem={selectedItem} setSelectedItem={dispatch} />
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className=" flex flex-wrap -m-2">
                 {selectedItem ? (
                     data.map((item) => (
-                        <img src={item.url} key={item.id} title={item.name} />
+                        <CatImageCard cat={item} key={item.id} />
                     )
                     )
                 ) : (
                     firstImages.map((item) => (
-                        <img src={item.url} key={item.id} title={item.name} />
+                        <CatImageCardWithoutProps cat={item} key={item.id} />
                     )
                     )
                 )}

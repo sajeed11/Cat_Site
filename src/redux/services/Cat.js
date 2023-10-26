@@ -17,10 +17,10 @@ export const catApi = createApi({
       query: () => `/breeds`,
     }),
     getImages: builder.query({
-      query: (breedId) => `/images/search?limit=10&breed_ids=${breedId}`,
+      query: (breedId) => `/images/search?limit=15&breed_ids=${breedId}`,
     }),
     getFirstImages: builder.query({
-      query: () => `/images/search?limit=5`,
+      query: () => `/images/search?limit=25`,
     }),
   }),
 });
