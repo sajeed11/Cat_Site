@@ -1,7 +1,7 @@
 const LearnAboutCats = () => {
-    return (
-        <div>LearnAboutCats</div>
-    )
+  return (
+    <div>LearnAboutCats</div>
+  )
 }
 
 export default LearnAboutCats
