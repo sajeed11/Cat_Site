@@ -6,9 +6,7 @@ import Business from "./Business";
 const Home = () => {
   return (
     <div>
-      <div
-        className={`flex-col bg-cat_landing bg-cover top-0 bottom-0 max-w-screen-xl`}
-      >
+      <div className={`flex-col bg-cat_landing bg-cover max-w-screen-xl`}>
         <div className={`${styles.boxWidth} `}>
           <Hero />
         </div>
