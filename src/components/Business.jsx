@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import { features } from "../constants";
-import styles, { layout } from "../styles";
+import styles from "../styles";
+import layout from "../layout";
 import Button from "./Button";
 import "../App.css";
 
 const FeatureCard = ({ title, content, icon, index }) => (
   <div
-    className={`flex flex-row p-6 rounded-[20px] cursor-pointer ${
-      index !== features.length - 1 ? "mb-6" : "mb-0"
-    } feature-card`}
+    className={`flex flex-row p-6 rounded-[20px] cursor-pointer ${index !== features.length - 1 ? "mb-6" : "mb-0"
+      } feature-card`}
   >
     <div
       className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}
