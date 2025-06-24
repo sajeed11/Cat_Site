@@ -1,30 +1,39 @@
-import styles from "../styles"
-import Button from "./Button"
-import GetLife from "./GetLife"
-import TypingEffect from "./TypingEffect"
+import styles from "../styles";
+import GetLife from "./GetLife";
+
+// Framer Motion imports & animations
+import { motion } from "framer-motion";
+const fadeInUp = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.6 } },
+};
 
 const Hero = () => {
-    return (
-        <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY} `}>
-            <div
-                className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
-            >
-                <GetLife />
-                <div className="flex flex-row justify-between items-center w-full mt-3">
-                    <h1 className="mt-2 flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[85px] leading-[60px]">
-                        The Next Generation<br className="sm:block hidden" />{" "}
-                    </h1>
-                </div>
-                <h1 className="mt-2 font-poppins font-semibold ss:text-[68px] text-[52px] text-btnColor ss:leading-[85.8px] leading-[60px] w-full">
-                    Of Cats
-                </h1>
-                <TypingEffect text='Welcome to the ultimate cat lovers haven! Our site is your go-to source for discovering different cat breeds and enjoying delightful, hilarious cat images. Explore the feline world with us!' speed={30} />
-                <div className="mt-3">
-                    <Button />
-                </div>
-            </div>
-        </section>
-    )
-}
+  return (
+    <motion.div
+      className={`bg-primary xs:bg-cat_landing bg-no-repeat bg-center 
+        xs:h-[400px] sm:h-[600px] md:h-[700px] lg:h-[750px] 
+        bg-cover max-w-screen-xl w-full ${styles.paddingY} ${styles.paddingX} flex flex-col items-center justify-center`}
+      initial="hidden"
+      whileInView="show"
+      variants={fadeInUp}
+    >
+      <GetLife />
+      <div className="flex flex-col items-center space-y-5 font-poppins font-normal text-4xl sm:text-6xl md:text-7xl leading-[60px]">
+        <div className="flex flex-col xs:flex-row items-center xs:space-x-4">
+          <h1 className="text-white">
+            The Next
+          </h1>
+          <h1 className="text-white">
+            Generation
+          </h1>
+        </div>
+        <h1 className="text-btnColor">
+          Of Cats
+        </h1>
+      </div>
+    </motion.div>
+  );
+};
 
-export default Hero
+export default Hero;

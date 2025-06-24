@@ -2,16 +2,18 @@ import styles from "../styles";
 import Hero from "./Hero";
 import Stats from "./Stats";
 import Business from "./Business";
+import SubHero from "./SubHero";
 
 const Home = () => {
   return (
     <div>
-      <div className={`flex-col bg-cat_landing bg-cover max-w-screen-xl`}>
-        <div className={`${styles.boxWidth} `}>
-          <Hero />
-        </div>
-      </div>
-      <div className={` bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+      <section className=" min-h-screen flex flex-col justify-center">
+        <Hero />
+      </section>
+      <section className="bg-primary min-h-screen flex flex-col justify-center">
+        <SubHero />
+      </section>
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Stats /> <Business />
         </div>
