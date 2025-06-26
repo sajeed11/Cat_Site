@@ -3,26 +3,30 @@ import Button from "./Button";
 
 // Framer Motion imports & animations
 import { motion } from "framer-motion";
-const fadeInUp = {
-  hidden: { opacity: 0, x: -20 },
-  show: { opacity: 1, x: 0, transition: { duration: 1 } },
-};
 
 function SubHero() {
   return (
-    <motion.div
-      className="max-w-screen-xl w-full flex flex-col items-center text-center"
-      initial="hidden"
-      whileInView="show"
-      variants={fadeInUp}
+    <div className="max-w-screen-xl w-full flex flex-col items-center text-center"
     >
-      <p className="font-poppins font-normal text-xl sm:text-3xl w-1/2 h-full my-2 text-black">
+      <motion.p
+        className="font-poppins font-normal text-xl sm:text-3xl w-1/2 h-full my-2 text-black"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
         Welcome to the ultimate cat lovers haven! Our site is your go-to source for discovering different cat breeds and enjoying delightful, hilarious cat images. Explore the feline world with us!
-      </p>
-      <div className="mt-4">
+      </motion.p>
+      <motion.div
+        className="mt-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        viewport={{ once: true }}
+      >
         <Button />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   )
 }
 
