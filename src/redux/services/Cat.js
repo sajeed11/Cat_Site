@@ -1,5 +1,8 @@
 import { fetchBaseQuery, createApi } from "@reduxjs/toolkit/query/react";
 
+const apiKey = import.meta.env.VITE_CAT_API_KEY;
+
+
 export const catApi = createApi({
   reducerPath: "catApi",
   baseQuery: fetchBaseQuery({
@@ -7,7 +10,7 @@ export const catApi = createApi({
     prepareHeaders: (headers) => {
       headers.set(
         "x-api-key",
-        "live_nA7DCgbjgep1jyDs69wikF6NX1eaeNIAZUs9p0pABRpPivcsVa5YLQrESHwDBomi"
+        apiKey
       );
       return headers;
     },
