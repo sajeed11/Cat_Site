@@ -139,3 +139,16 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+
+/* New CSS styles for the cat project */
+
+#getStarted {
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+#getStarted:hover {
+  box-shadow: var(--card-shadow);
+  color: #fff;
+}

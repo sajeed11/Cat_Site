@@ -10,24 +10,19 @@ const fadeInUp = {
 
 function SubHero() {
   return (
-    <div className={`max-w-screen-xl w-full flex flex-col items-center text-center`}>
-      <motion.p
-        className="font-poppins font-normal text-xl sm:text-3xl w-1/2 h-32 my-2 text-black"
-        initial="hidden"
-        whileInView="show"
-        variants={fadeInUp}
-      >
+    <motion.div
+      className="max-w-screen-xl w-full flex flex-col items-center text-center"
+      initial="hidden"
+      whileInView="show"
+      variants={fadeInUp}
+    >
+      <p className="font-poppins font-normal text-xl sm:text-3xl w-1/2 h-full my-2 text-black">
         Welcome to the ultimate cat lovers haven! Our site is your go-to source for discovering different cat breeds and enjoying delightful, hilarious cat images. Explore the feline world with us!
-      </motion.p>
-      <motion.div
-        className="mt-3"
-        initial="hidden"
-        whileInView="show"
-        variants={fadeInUp}
-      >
+      </p>
+      <div className="mt-4">
         <Button />
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   )
 }
 
