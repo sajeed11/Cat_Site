@@ -7,7 +7,7 @@ import SubHero from "./SubHero";
 const Home = () => {
   return (
     <div>
-      <section className=" min-h-screen flex flex-col justify-center">
+      <section className="min-h-screen flex flex-col justify-center">
         <Hero />
       </section>
       <section className="bg-primary min-h-screen flex flex-col justify-center">

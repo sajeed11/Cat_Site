@@ -13,7 +13,7 @@ const Hero = () => {
     <motion.div
       className={`bg-primary xs:bg-cat_landing bg-no-repeat bg-center 
         xs:h-[400px] sm:h-[600px] md:h-[700px] lg:h-[750px] 
-        bg-cover max-w-screen-xl w-full ${styles.paddingY} ${styles.paddingX} flex flex-col items-center justify-center`}
+        bg-cover max-w-screen-xl min-h-screen  w-full ${styles.paddingY} ${styles.paddingX} flex flex-col items-center justify-center`}
       initial="hidden"
       whileInView="show"
       variants={fadeInUp}
