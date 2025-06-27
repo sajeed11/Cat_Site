@@ -43,21 +43,21 @@ export const features = [
     icon: featureLogo2,
     title: "Cat Care",
     content:
-      "Cat care involves feeding, grooming, play, and regular vet check-ups for a healthy.",
+      "Cat care means more than feeding — it’s about grooming, playtime, enrichment, and regular health check-ups to keep your feline thriving.",
   },
   {
     id: "feature-2",
     icon: featureLogo1,
     title: "100% Secured",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "We go the extra mile to ensure your personal information and pet data are safe and protected.",
   },
   {
     id: "feature-3",
     icon: featureLogo3,
-    title: "Balance Transfer",
+    title: "Routine & Balance",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Maintaining a balanced routine—from diet to daily play—helps your cat avoid stress and stay physically fit.",
   },
 ];
 
