@@ -10,14 +10,15 @@ const Home = () => {
       <section className="min-h-screen flex flex-col justify-center">
         <Hero />
       </section>
-      <section className="bg-primary min-h-screen flex flex-col justify-center">
+      <section className="bg-primary min-h-screen flex items-center justify-center">
         <SubHero />
       </section>
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Stats /> <Business />
-        </div>
-      </div>
+      <section className="bg-primary min-h-screen flex items-center justify-center">
+        <Stats />
+      </section>
+      <section className={`bg-primary min-h-screen ${styles.paddingX} ${styles.flexStart}`}>
+        <Business />
+      </section>
     </div>
   );
 };

@@ -3,36 +3,54 @@ import GetLife from "./GetLife";
 
 // Framer Motion imports & animations
 import { motion } from "framer-motion";
-const fadeInUp = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.6 } },
-};
 
 const Hero = () => {
   return (
-    <motion.div
+    <div
       className={`bg-primary xs:bg-cat_landing bg-no-repeat bg-center 
         xs:h-[400px] sm:h-[600px] md:h-[700px] lg:h-[750px] 
         bg-cover max-w-screen-xl min-h-screen  w-full ${styles.paddingY} ${styles.paddingX} flex flex-col items-center justify-center`}
-      initial="hidden"
-      whileInView="show"
-      variants={fadeInUp}
     >
-      <GetLife />
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
+        <GetLife />
+      </motion.div>
       <div className="flex flex-col items-center space-y-5 font-poppins font-normal text-4xl sm:text-6xl md:text-7xl leading-[60px]">
         <div className="flex flex-col xs:flex-row items-center xs:space-x-4">
-          <h1 className="text-white">
+          <motion.h1
+            className="text-white"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
             The Next
-          </h1>
-          <h1 className="text-white">
+          </motion.h1>
+          <motion.h1
+            className="text-white"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 1.2 }}
+            viewport={{ once: true }}
+          >
             Generation
-          </h1>
+          </motion.h1>
         </div>
-        <h1 className="text-btnColor">
+        <motion.h1
+          className="text-btnColor"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.8 }}
+          viewport={{ once: true }}
+        >
           Of Cats
-        </h1>
+        </motion.h1>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

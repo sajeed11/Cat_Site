@@ -4,10 +4,9 @@ import Button from "./Button";
 // Framer Motion imports & animations
 import { motion } from "framer-motion";
 
-function SubHero() {
+const SubHero = () => {
   return (
-    <div className="max-w-screen-xl w-full flex flex-col items-center text-center"
-    >
+    <div className="max-w-screen-xl w-full flex flex-col items-center text-center">
       <motion.p
         className="font-poppins font-normal text-xl sm:text-3xl w-1/2 h-full my-2 text-black"
         initial={{ opacity: 0, x: -50 }}
