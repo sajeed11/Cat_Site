@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Images from "./components/Images";
 import LearnAboutCats from "./components/LearnAboutCats";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/images" element={<Images />} />
         <Route path="/cats" element={<LearnAboutCats />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
