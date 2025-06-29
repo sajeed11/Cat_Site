@@ -3,43 +3,34 @@ import { Link } from "react-router-dom";
 import { navitems } from "../constants"
 
 const Notification = () => {
-	const column1 = navitems.slice(0, 3);
-	const column2 = navitems.slice(3, 6);
 	return (
-		<>
-			<div className="absolute top-6 z-40 right-1 w-[400px] h-[250px] bg-white rounded-[20px] hidden group-hover:block">
-				<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-5 ">
-					<div>
-						{column1.map((link, index) => (
-							<a
-								key={index}
-								href={link.url}
-								className="block py-2 hover:underline text-btnColor cursor-pointer text-lg font-semibold"
-							>
-								{link.title}
-							</a>
-						))}
-					</div>
+		<div
+			className="flex flex-col items-center	notification border-solid border-x-2 border-b rounded-b-md shadow-sm p-2 w-48 z-20"
+			role="menu"
+			aria-label="Notification Menu"
+		>
+			<div className="flex flex-col items-start gap-4 w-full">
+				{navitems.map((item) => (
+					<Link
+						key={item.id}
+						to={`/${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+						className="text-sm sm:text-base text-gray-800 hover:text-blue-600 transition-colors duration-200"
+					>
+						{item.title}
+					</Link>
+				))}
 
-					<div>
-						{column2.map((link, index) => (
-							<a
-								key={index}
-								href={link.url}
-								className="block py-2 hover:underline
-								text-btnColor cursor-pointer text-lg font-semibold"
-							>
-								{link.title}
-							</a>
-						))}
-					</div>
-				</div>
-				<div className="mt-20 ml-5">
-					<Link className="text-black" to='/images'>See More</Link>
-				</div>
 			</div>
-		</>
-	)
-}
 
+			<div className="mt-4 flex justify-start w-full">
+				<Link
+					to="/images"
+					className="text-sm text-blue-600 hover:underline hover:text-blue-800 transition-colors duration-200"
+				>
+					See More →
+				</Link>
+			</div>
+		</div>
+	);
+};
 export default Notification
