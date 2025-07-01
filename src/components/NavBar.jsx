@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { navLinks } from "../constants";
-import { logo } from "../../public/assets";
+import { Logo } from "../../public";
 import Notification from "./Notification";
 
 import { Menu } from "@mui/icons-material";
@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <nav className="fixed glass w-full h-16 flex flex-row justify-between items-center z-40">
-      <img src={logo} alt="Kitty" width={50} className="ml-5" />
+      <img src={Logo} alt="Kitty" width={50} className="ml-5" />
       <ul className="w-3/4 h-full list-none flex items-center justify-end mr-5">
         {navLinks.map((nav, index) => (
           <li

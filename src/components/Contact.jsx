@@ -29,7 +29,6 @@ const Contact = () => {
               </div>
             </div>
           </section>
-          npm
         </div>
       </div>
     </div>

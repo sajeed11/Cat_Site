@@ -1,4 +1,4 @@
-import { featureLogo1, featureLogo2, featureLogo3 } from "../../public/assets";
+import { FeatureLogo1, FeatureLogo2, FeatureLogo3 } from "../../public";
 
 export const navLinks = [
   {
@@ -40,21 +40,21 @@ export const stats = [
 export const features = [
   {
     id: "feature-1",
-    icon: featureLogo2,
+    icon: FeatureLogo2,
     title: "Cat Care",
     content:
       "Cat care means more than feeding — it’s about grooming, playtime, enrichment, and regular health check-ups to keep your feline thriving.",
   },
   {
     id: "feature-2",
-    icon: featureLogo1,
+    icon: FeatureLogo1,
     title: "100% Secured",
     content:
       "We go the extra mile to ensure your personal information and pet data are safe and protected.",
   },
   {
     id: "feature-3",
-    icon: featureLogo3,
+    icon: FeatureLogo3,
     title: "Routine & Balance",
     content:
       "Maintaining a balanced routine—from diet to daily play—helps your cat avoid stress and stay physically fit.",
