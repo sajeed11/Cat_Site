@@ -1,4 +1,4 @@
-import { featureLogo1, featureLogo2, featureLogo3 } from "../assets";
+import { featureLogo1, featureLogo2, featureLogo3 } from "../../public/assets";
 
 export const navLinks = [
   {

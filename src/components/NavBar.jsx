@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { navLinks } from "../constants";
-import { logo } from "../assets";
+import { logo } from "../../public/assets";
 import Notification from "./Notification";
 
 import { Menu } from "@mui/icons-material";

@@ -15,8 +15,8 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        cat_landing: "url('./src/assets/cats.jpg')",
-        cat_landing2: "url('./src/assets/cats2.jpg')",
+        cat_landing: "url('./assets/cats.jpg')",
+        cat_landing2: "url('./assets/cats2.jpg')",
       },
     },
     screens: {
