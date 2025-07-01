@@ -1,7 +1,7 @@
 import { fetchBaseQuery, createApi } from "@reduxjs/toolkit/query/react";
 
 const apiKey = import.meta.env.VITE_CAT_API_KEY;
-
+console.log("API Key:", apiKey);
 
 export const catApi = createApi({
   reducerPath: "catApi",
@@ -20,10 +20,10 @@ export const catApi = createApi({
       query: () => `/breeds`,
     }),
     getImages: builder.query({
-      query: (breedId) => `/images/search?limit=15&breed_ids=${breedId}`,
+      query: (breedId) => `/images/search?limit=9&breed_ids=${breedId}`,
     }),
     getFirstImages: builder.query({
-      query: () => `/images/search?limit=25`,
+      query: () => `/images/search?limit=15`,
     }),
   }),
 });
