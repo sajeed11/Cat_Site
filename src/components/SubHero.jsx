@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 const SubHero = () => {
   return (
-    <div className="max-w-screen-xl w-full flex flex-col items-center text-center">
+    <div className="max-w-screen-xl w-full flex flex-col items-center text-center mx-5">
       <motion.p
-        className="font-poppins font-normal text-xl sm:text-3xl w-1/2 h-full my-2 text-black"
+        className="font-poppins font-normal text-xl sm:text-3xl w-full sm:w-1/2 h-full my-2 text-black"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}

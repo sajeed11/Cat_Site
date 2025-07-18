@@ -23,7 +23,7 @@ const NavBar = () => {
           <li
             key={nav.id}
             className={`relative h-full font-poppins sm:flex items-center hidden cursor-pointer sm:text-sm md:text-base transition-all ${index === navLinks.length - 1 ? "mr-0" : "mr-10"
-              } text-white hover:text-black`}
+              } text-black hover:text-btnColor`}
             onMouseEnter={() => setHoveredItem(nav.id)}
             onMouseLeave={() => setHoveredItem(null)}
           >

@@ -5,7 +5,6 @@ import {
 	useGetFirstImagesQuery,
 } from "../redux/services/Cat";
 import SearchBar from "./SearchBar";
-import styles from "../styles";
 
 export const CatImageCard = ({ cat }) => {
 	return (
@@ -63,7 +62,6 @@ const Images = () => {
 	const { data: firstImages, isFetching: firstImagesIsFetching } =
 		useGetFirstImagesQuery();
 	const { data, error } = useGetImagesQuery(selectedItem);
-	// console.log(data);
 	// useEffect(() => {
 	//     dispatch(useGetImagesQuery(selectedItem));
 	// }, [selectedItem, dispatch]);
@@ -71,16 +69,16 @@ const Images = () => {
 	if (firstImagesIsFetching) return <div>Loading...</div>;
 	if (error) return <div>Oh no, there was an error</div>;
 	return (
-		<div className={`${styles.section} ${styles.marginX}`}>
+		<section className="min-h-screen flex flex-col justify-center bg-primary">
 			<SearchBar selectedItem={selectedItem} setSelectedItem={dispatch} />
-			<div className=" flex flex-wrap -m-2">
+			<div className="flex flex-wrap items-center justify-center gap-4 p-4">
 				{selectedItem
 					? data.map((item) => <CatImageCard cat={item} key={item.id} />)
 					: firstImages.map((item) => (
 						<CatImageCardWithoutProps cat={item} key={item.id} />
 					))}
 			</div>
-		</div>
+		</section>
 	);
 };
 

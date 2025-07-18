@@ -13,7 +13,7 @@ const Home = () => {
       <section className="bg-primary min-h-screen flex items-center justify-center">
         <SubHero />
       </section>
-      <section className="bg-primary min-h-screen flex items-center justify-center">
+      <section className="bg-secondary min-h-screen flex items-center justify-center">
         <Stats />
       </section>
       <section className={`bg-primary min-h-screen ${styles.paddingX} ${styles.flexStart}`}>

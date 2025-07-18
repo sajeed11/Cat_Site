@@ -12,7 +12,7 @@ const Stats = () => {
           key={stat.id}
         >
           <motion.h4
-            className="font-poppins font-semibold text-4xl xs:text-5xl md:text-6xl xs:leading-[53px] leading-[43px] text-white"
+            className="font-poppins font-semibold text-4xl xs:text-5xl md:text-6xl xs:leading-[53px] leading-[43px] text-black"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}

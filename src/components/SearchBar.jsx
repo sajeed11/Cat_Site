@@ -13,7 +13,7 @@ const SearchBar = () => {
     if (isFetching) return <div>Loading...</div>;
     if (error) return <div>Oh no, there was an error</div>;
     return (
-        <div className='flex justify-center items-center my-6'>
+        <div className='flex justify-center items-center mt-20'>
             <div className='relative inline-block text-gray-700 '>
                 <select onChange={handleSelect} className='h-12 block appearance-none w-[1000px] bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"'>
                     <option value="">Select an item</option>
