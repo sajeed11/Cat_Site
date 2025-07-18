@@ -16,13 +16,13 @@ const NavBar = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   return (
-    <nav className="fixed glass w-full h-16 flex flex-row justify-between items-center z-40">
+    <nav className="fixed glass w-3/4 h-16 flex flex-row justify-between items-center z-40 mx-auto mt-2 rounded-2xl">
       <img src={Logo} alt="Kitty" width={50} className="ml-5" />
       <ul className="w-3/4 h-full list-none flex items-center justify-end mr-5">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`relative h-full font-poppins sm:flex items-center hidden cursor-pointer text-xs xs:text-sm sm:text-base transition-all ${index === navLinks.length - 1 ? "mr-0" : "mr-10"
+            className={`relative h-full font-poppins sm:flex items-center hidden cursor-pointer sm:text-sm md:text-base transition-all ${index === navLinks.length - 1 ? "mr-0" : "mr-10"
               } text-white hover:text-black`}
             onMouseEnter={() => setHoveredItem(nav.id)}
             onMouseLeave={() => setHoveredItem(null)}
@@ -54,7 +54,7 @@ const NavBar = () => {
         ""
       )} */}
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden flex flex-1 justify-end items-center mx-3">
         {!isMobile ? (
           <Menu className="text-white cursor-pointer" onClick={() => setIsMobile(true)} />
         ) : (
